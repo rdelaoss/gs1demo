@@ -38,37 +38,13 @@ public class prueba extends javax.swing.JFrame {
         // |...:: [    LINEAR BARCODE   ] ::... |
         // |...:: [ ------------------- ] ::... |
 
-        // A simple example of barcoding in an application
-        //· CODABAR
-        //· CODE11
-        //· CODE128
-        //· CODE39
-        //· CODE39EXT
-        //· CODE93
-        //· CODE93EXT
-        //· EAN13
-        //· EAN8
-        //· IND25
-        //· INTERLEAVED25
-        //· MAT25
-        //· MSI
-        //· ONECODE
-        //· PLANET
-        //· POSTNET
-        //· UCC128
-        //· UPCA
-        //· UPCE
         bc2 = new BarCode();
         bc2.barType = bc2.CODE128;
 
         bc2.setDataToEncode("4157419700003137390200000080009620200716802000002237041022020");
-//        bc2.setDataToEncode("01074100005030061730112810GS1SV001211");
-        //bc2.setDataToEncode("01178612345000141713123110ABC123");
-//        bc2.setDataToEncode("415305100000363239020000043005802000018811");
         
         bc2.setSize(400, 200);
 
-//        image2 = new BufferedImage(400, 350, BufferedImage.TYPE_INT_ARGB);
         image2 = new BufferedImage(400, 400, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = image2.createGraphics();
         bc2.paint(g2);
@@ -87,8 +63,6 @@ public class prueba extends javax.swing.JFrame {
             Graphics2D g3 = image.createGraphics();
             g3.drawImage(icon.getImage(), 0, 0, icon.getImageObserver());
             g3.dispose();
-            //BufferedImage dest = image.getSubimage(12, 12, 800, 70); PRIMERA CALIBRACION
-            //BufferedImage dest = image.getSubimage(0, 13, 825, 40); CALIBRACION FINAL
             BufferedImage dest = image.getSubimage(0, 13, 825, 40);
             ImageIO.write(dest, "jpg", new File("C:\\Users\\Administrador.ARRUPE\\Desktop\\barcode\\GS1.jpg"));
 
